@@ -1,0 +1,113 @@
+main.container {
+  padding-top: 24px;
+}
+.cv-grid {
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 980px) {
+  .cv-grid {
+    grid-template-columns: 320px 1fr;
+  }
+}
+.left-col .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  object-fit: cover;
+}
+.left-col .block {
+  margin-top: 16px;
+}
+.skill {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0;
+}
+.skill .bar {
+  height: 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--card), var(--bg) 20%);
+  overflow: hidden;
+}
+.skill .bar > span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+}
+.timeline {
+  position: relative;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+.xp {
+  position: relative;
+  padding-left: 36px;
+  margin: 0 0 18px;
+}
+.xp:last-child {
+  margin-bottom: 0;
+}
+.xp::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  background: var(--card);
+}
+.xp .head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+}
+.xp .period {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.xp .title {
+  font-weight: 600;
+}
+.xp .company {
+  opacity: 0.9;
+}
+.xp .tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+.xp .desc {
+  margin-top: 8px;
+  opacity: 0.95;
+}
+/* Style spécifique pour le lien CV : underline via box-shadow pour un rendu
+         plus contrôlé que text-decoration (évite les conflits entre pages). */
+.nav-center a[href='#CV'].actif {
+  text-decoration: none;
+  color: var(--link-hover) !important;
+  box-shadow: inset 0 -3px 0 var(--link-hover);
+}
+@media print {
+  header {
+    display: none;
+  }
+  body {
+    background: white;
+  }
+}

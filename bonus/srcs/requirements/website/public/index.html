@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Raphaël Ferreira – Portfolio</title>
+    <!-- favicon for light/dark themes -->
+    <link rel="icon" type="image/x-icon" href="assets/img/Favicom_light.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/img/Favicom_light.ico" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/x-icon" href="assets/img/Favicom_dark.ico" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="smooth">
+    <!-- header start-->
+    <header>
+      <div class="container nav">
+        <div class="nav-left">
+          <a href="#home" class="brand">Raphaël Ferreira</a>
+        </div>
+        <nav class="links nav-center" aria-label="Navigation principale">
+          <a href="#about">À propos</a>
+          <a href="#projects">Projets</a>
+          <a id="cvLink" href="cv.html" aria-label="Ouvrir mon CV">CV</a>
+        </nav>
+        <div class="nav-right" aria-label="Liens sociaux et actions">
+          <a
+            class="icon-link github"
+            href="https://github.com/RaphyStoll"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            title="GitHub">
+            <svg viewBox="0 0 448 512" role="img" aria-hidden="true">
+              <title>GitHub</title>
+              <path
+                d="M448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320zM265.8 407.7c0-1.8 0-6 .1-11.6 .1-11.4 .1-28.8 .1-43.7 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-26.6-7.5-56.6-7.5-83.2 0 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 9 .1 21.7 .1 30.6 0 4.8 .1 8.6 .1 10 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3-8.4 1.5-11.5-3.7-11.5-8z" />
+            </svg>
+          </a>
+          <a
+            class="icon-link linkedin"
+            href="https://www.linkedin.com/in/raphaël-ferreira"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            title="LinkedIn">
+            <svg viewBox="0 0 640 640" role="img" aria-hidden="true">
+              <title>LinkedIn</title>
+              <path
+                d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM165 266.2L231.5 266.2L231.5 480L165 480L165 266.2zM236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160C219.5 160 236.7 177.2 236.7 198.5zM413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480L413.9 480z" />
+            </svg>
+          </a>
+          <a class="icon-link mail" href="#contact" aria-label="Aller au formulaire de contact" title="Contact">
+            <svg viewBox="0 0 512 512" role="img" aria-hidden="true">
+              <title>Contact</title>
+              <path
+                d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z" />
+            </svg>
+          </a>
+          <button id="themeBtn" class="btn ghost" aria-label="Basculer le thème"></button>
+        </div>
+      </div>
+    </header>
+    <!-- header end-->
+
+    <main>
+      <section id="home" class="hero container">
+        <div class="grid g-2 align-center">
+          <div>
+            <h1>42 Lausanne Student</h1>
+            <h2>Ferreira Raphaël</h2>
+            <p>Qualité = lisibilité × tests × docs.</p>
+            <div class="stack" id="highlights"></div>
+          </div>
+          <div>
+            <div class="card">
+              <div class="pad">
+                <div class="muted small mb-6">Based in Lausanne, CH</div>
+                <p>
+                  Étudiant à 42 Lausanne. Passion pour le C/C++,et la création d'outils pour la communauté.
+                  Actuellement, je fini mon cursus a 42 lausanne j'explore des side-quest.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="container">
+          <h2>À propos de moi</h2>
+          <div class="about-grid">
+            <!-- Card 1: Philosophie -->
+            <div class="about-item reveal" data-about="philosophie">
+              <div class="about-card">
+                <div class="icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 3l2.2 6.6H21l-5.8 4.2L16.8 21 12 16.9 7.2 21l1.6-7.2L3 9.6h6.8z" />
+                  </svg>
+                </div>
+                <h3>Philosophie</h3>
+              </div>
+            </div>
+
+            <!-- Card 2: Stack Technique -->
+            <div class="about-item reveal" data-about="stack">
+              <div class="about-card">
+                <div class="icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="3" y="4" width="7" height="7" rx="1" />
+                    <rect x="14" y="4" width="7" height="7" rx="1" />
+                    <rect x="14" y="15" width="7" height="7" rx="1" />
+                    <rect x="3" y="15" width="7" height="7" rx="1" />
+                  </svg>
+                </div>
+                <h3>Stack Technique</h3>
+              </div>
+            </div>
+
+            <!-- Card 3: Objectifs -->
+            <div class="about-item reveal" data-about="objectifs">
+              <div class="about-card">
+                <div class="icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 19V5" />
+                    <path d="M5 12l7-7 7 7" />
+                  </svg>
+                </div>
+                <h3>Objectifs</h3>
+              </div>
+            </div>
+
+            <!-- Card 4: 42 Network -->
+            <div class="about-item reveal" data-about="network">
+              <div class="about-card">
+                <div class="icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <h3>Réseau & Communauté</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panneau de détails qui s'affiche sous les cartes -->
+          <div id="aboutPanel" class="about-panel">
+            <div class="about-panel-content">
+              <div class="about-details" data-detail="philosophie">
+                <h3>Philosophie de développement</h3>
+                <p>
+                  La formation à 42 m'a appris qu'un bon développeur ne se mesure pas seulement à sa capacité à écrire
+                  du code.
+                  <strong>Qualité = lisibilité × tests × documentation.</strong>
+                </p>
+                <p>
+                  Je privilégie le
+                  <strong>minimalisme</strong>
+                  dans l'interface utilisateur, la
+                  <strong>clarté</strong>
+                  dans le code, et la
+                  <strong>rigueur</strong>
+                  dans les tests. Chaque projet est une opportunité d'apprendre et de partager avec la communauté open
+                  source.
+                </p>
+                <blockquote>
+                  <p>"Simplicity is the ultimate sophistication."</p>
+                  <cite>— Leonardo da Vinci</cite>
+                </blockquote>
+              </div>
+
+              <div class="about-details" data-detail="stack">
+                <h3>Stack Technique</h3>
+                <p>
+                  Ma formation à 42 Lausanne se concentre principalement sur le
+                  <strong>C</strong>
+                  et le
+                  <strong>C++</strong>
+                  , des langages qui m'ont appris la rigueur et la gestion bas niveau.
+                </p>
+                <ul>
+                  <li>
+                    <strong>C/C++</strong>
+                    : Projets système, algorithmes, gestion mémoire
+                  </li>
+                  <li>
+                    <strong>Python</strong>
+                    : Scripting, automation, prototypage rapide
+                  </li>
+                  <li>
+                    <strong>Web</strong>
+                    : HTML/CSS/JavaScript pour les interfaces
+                  </li>
+                  <li>
+                    <strong>Git</strong>
+                    : Versionning et collaboration
+                  </li>
+                </ul>
+                <blockquote>
+                  <p>
+                    "C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your
+                    whole leg off."
+                  </p>
+                  <cite>— Bjarne Stroustrup</cite>
+                </blockquote>
+              </div>
+
+              <div class="about-details" data-detail="objectifs">
+                <h3>Ce que je cherche</h3>
+                <p>
+                  Je ne cherche pas seulement un emploi, mais une
+                  <strong>carrière</strong>
+                  où je peux continuer à grandir professionnellement. La formation à 42 ne transmet pas seulement des
+                  compétences techniques, mais
+                  <strong>apprend à apprendre</strong>
+                  .
+                </p>
+                <p>
+                  Mon objectif est de résoudre des
+                  <strong>problèmes concrets</strong>
+                  , de créer des outils utiles pour la communauté, et de rester à jour avec les technologies émergentes.
+                  Je crois fermement que le partage de connaissances enrichit tout le monde.
+                </p>
+                <blockquote>
+                  <p>"The only way to learn a new programming language is by writing programs in it."</p>
+                  <cite>— Dennis Ritchie</cite>
+                </blockquote>
+              </div>
+
+              <div class="about-details" data-detail="network">
+                <h3>Réseau & Communauté 42</h3>
+                <p>
+                  42 Lausanne, c'est bien plus qu'une école : c'est un
+                  <strong>réseau mondial d'excellence</strong>
+                  . Chaque personne est unique, et la diversité est une force pendant la formation et sur le marché du
+                  travail.
+                </p>
+                <p>
+                  La formation encourage l'
+                  <strong>échange</strong>
+                  , valorise le
+                  <strong>partage</strong>
+                  , et cultive la
+                  <strong>préoccupation pour les autres</strong>
+                  . L'école s'adapte au rythme de chacun, permettant aux étudiants de développer leurs compétences
+                  sociales pour devenir plus que de simples experts dans leur domaine.
+                </p>
+                <p class="muted small">
+                  <em>
+                    Inspiré par les valeurs de 42 : peer-learning, autonomie, et excellence à travers la diversité.
+                  </em>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--carousell-->
+      <section id="projects">
+        <div class="container">
+          <h2>Projets</h2>
+          <div id="tagBar" class="tags"></div>
+          <div class="arrows">
+            <div id="grid" class="grid g-3"></div>
+          </div>
+          <div id="pager" class="pager"></div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <div class="card">
+            <div class="pad">
+              <h3 class="mb-8">On construit quelque chose ?</h3>
+
+              <form id="contactForm" class="row row2">
+                <!---Honeypot-->
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  autocomplete="off"
+                  tabindex="-1"
+                  style="position: absolute; left: -9999px; opacity: 0; pointer-events: none"
+                  aria-hidden="true" />
+                <!--fin  du Honeypot-->
+                <div class="row">
+                  <label for="name">Nom</label>
+                  <input id="name" name="name" required />
+                </div>
+                <div class="row">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" name="email" required />
+                </div>
+                <div class="row full">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-actions">
+                  <small>En envoyant, vous acceptez d'être contacté par email. Aucune newsletter, jamais.</small>
+                  <button class="btn primary" type="submit" id="sendBtn">Envoyer</button>
+                </div>
+                <div id="formStatus" class="mt-8"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        ©
+        <span id="year"></span>
+        Raphaël Ferreira.
+      </div>
+    </footer>
+
+  <script src="assets/js/utils/dom.js" defer></script>
+  <script src="assets/js/data/loader.js" defer></script>
+  <script src="assets/js/theme.js" defer></script>
+  <script src="assets/js/ui/about.js" defer></script>
+  <script src="assets/js/contact.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/carousel.js" defer></script>
+  </body>
+</html>

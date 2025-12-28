@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Démo — Template</title>
+    <meta name="description" content="Page de démonstration du projet (template)." />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/projects.css" />
+    <script src="../../assets/js/theme.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="nav-left">
+          <a href="/index.html#home" class="brand">Raphaël Ferreira</a>
+        </div>
+        <nav class="links nav-center" aria-label="Navigation principale">
+          <a href="/index.html#about">À propos</a>
+          <a href="/index.html#projects">Projets</a>
+          <a id="cvLink" href="/cv.html" aria-label="Ouvrir mon CV">CV</a>
+        </nav>
+        <div class="nav-right" aria-label="Liens sociaux et actions">
+          <button id="themeBtn" class="btn ghost" aria-label="Basculer le thème"></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container pad">
+      <div class="card">
+        <div class="pad">
+          <h1 style="margin: 0 0 8px">Démo interactive</h1>
+          <p class="muted" style="margin: 0 0 16px">Intègre ici une vidéo, un GIF ou une iframe.</p>
+
+          <div class="grid g-3">
+            <div class="card">
+              <div class="pad">
+                <h3>Vidéo (exemple)</h3>
+                <div
+                  style="
+                    aspect-ratio: 16 / 9;
+                    background: var(--bg-soft);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  ">
+                  <span class="muted">Placez votre lecteur vidéo ici</span>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="pad">
+                <h3>Embed (exemple)</h3>
+                <div
+                  style="
+                    aspect-ratio: 16 / 9;
+                    background: var(--bg-soft);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  ">
+                  <span class="muted">Placez votre iframe ici</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 16px">
+            <a class="btn" href="./index.html">← Retour au projet</a>
+            <a class="btn" href="./doc.html">Documentation</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        ©
+        <span id="year"></span>
+        Raphaël Ferreira
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const y = document.getElementById('year')
+        if (y) y.textContent = new Date().getFullYear()
+      })
+    </script>
+  </body>
+</html>

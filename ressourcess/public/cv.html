@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV – Raphaël Ferreira</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/cv.js" defer></script>
+    <style>
+      /* Mise en page papier 2 colonnes */
+      main.container {
+        padding-top: 24px;
+      }
+      .cv-grid {
+        display: grid;
+        gap: 20px;
+      }
+      @media (min-width: 980px) {
+        .cv-grid {
+          grid-template-columns: 320px 1fr;
+        }
+      }
+      .left-col .avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: var(--bg-soft);
+        object-fit: cover;
+      }
+      .left-col .block {
+        margin-top: 16px;
+      }
+      .skill {
+        display: grid;
+        gap: 6px;
+        margin: 10px 0;
+      }
+      .skill .bar {
+        height: 10px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: color-mix(in oklab, var(--card), var(--bg) 20%);
+        overflow: hidden;
+      }
+      .skill .bar > span {
+        display: block;
+        height: 100%;
+        background: var(--accent);
+        border-radius: 999px;
+      }
+      .timeline {
+        position: relative;
+      }
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--border);
+      }
+      .xp {
+        position: relative;
+        padding-left: 36px;
+        margin: 0 0 18px;
+      }
+      .xp:last-child {
+        margin-bottom: 0;
+      }
+      .xp::before {
+        content: '';
+        position: absolute;
+        left: 3px;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        border-radius: 999px;
+        border: 2px solid var(--accent);
+        background: var(--card);
+      }
+      .xp .head {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: baseline;
+      }
+      .xp .period {
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+      .xp .title {
+        font-weight: 600;
+      }
+      .xp .company {
+        opacity: 0.9;
+      }
+      .xp .tags {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 6px;
+      }
+      .xp .desc {
+        margin-top: 8px;
+        opacity: 0.95;
+      }
+      /* Style spécifique pour le lien CV : underline via box-shadow pour un rendu
+         plus contrôlé que text-decoration (évite les conflits entre pages). */
+      .nav-center a[href='#CV'].actif {
+        text-decoration: none;
+        color: var(--link-hover) !important;
+        box-shadow: inset 0 -3px 0 var(--link-hover);
+      }
+      @media print {
+        header {
+          display: none;
+        }
+        body {
+          background: white;
+        }
+      }
+    </style>
+    <meta
+      name="description"
+      content="CV interactif de Raphaël Ferreira: expériences, compétences, formation, projets." />
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="nav-left">
+          <a href="../#home" class="brand">Raphaël Ferreira</a>
+        </div>
+        <nav class="links nav-center" aria-label="Navigation principale">
+          <a href="index.html#about">À propos</a>
+          <a href="index.html#projects">Projets</a>
+          <a href="#CV" class="actif">CV</a>
+        </nav>
+        <div class="nav-right" aria-label="Liens sociaux et actions">
+          <a
+            class="icon-link github"
+            href="https://github.com/RaphyStoll"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            title="GitHub">
+            <svg viewBox="0 0 448 512" role="img" aria-hidden="true">
+              <title>GitHub</title>
+              <path
+                d="M448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320zM265.8 407.7c0-1.8 0-6 .1-11.6 .1-11.4 .1-28.8 .1-43.7 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-26.6-7.5-56.6-7.5-83.2 0 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 9 .1 21.7 .1 30.6 0 4.8 .1 8.6 .1 10 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3-8.4 1.5-11.5-3.7-11.5-8z" />
+            </svg>
+          </a>
+          <a
+            class="icon-link linkedin"
+            href="https://www.linkedin.com/in/raphaël-ferreira"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            title="LinkedIn">
+            <svg viewBox="0 0 640 640" role="img" aria-hidden="true">
+              <title>LinkedIn</title>
+              <path
+                d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM165 266.2L231.5 266.2L231.5 480L165 480L165 266.2zM236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160C219.5 160 236.7 177.2 236.7 198.5zM413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480L413.9 480z" />
+            </svg>
+          </a>
+          <a class="icon-link mail" href="#contact" aria-label="Aller au formulaire de contact" title="Contact">
+            <svg viewBox="0 0 512 512" role="img" aria-hidden="true">
+              <title>Contact</title>
+              <path
+                d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z" />
+            </svg>
+          </a>
+          <button id="themeBtn" class="btn ghost" aria-label="Basculer le thème"></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="cv-grid">
+        <aside class="left-col">
+          <div class="card">
+            <div class="pad">
+              <img id="avatar" class="avatar" alt="Photo de profil" />
+              <h1 id="name" style="margin: 12px 0 6px">Raphaël Ferreira</h1>
+              <div class="muted">
+                <span id="role">Étudiant 42 – C/C++</span>
+              </div>
+              <div class="block">
+                <p id="about" class="muted" style="margin: 0"></p>
+              </div>
+              <div class="block">
+                <div class="stack social-links" id="links" data-static="true">
+                  <a
+                    class="icon-link github"
+                    href="https://github.com/RaphyStoll"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    title="GitHub">
+                    <svg viewBox="0 0 448 512" role="img" aria-hidden="true">
+                      <title>GitHub</title>
+                      <path
+                        d="M448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320zM265.8 407.7c0-1.8 0-6 .1-11.6 .1-11.4 .1-28.8 .1-43.7 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-26.6-7.5-56.6-7.5-83.2 0 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 9 .1 21.7 .1 30.6 0 4.8 .1 8.6 .1 10 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3-8.4 1.5-11.5-3.7-11.5-8z" />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link linkedin"
+                    href="https://www.linkedin.com/in/raphaël-ferreira"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    title="LinkedIn">
+                    <svg viewBox="0 0 640 640" role="img" aria-hidden="true">
+                      <title>LinkedIn</title>
+                      <path
+                        d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM165 266.2L231.5 266.2L231.5 480L165 480L165 266.2zM236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160C219.5 160 236.7 177.2 236.7 198.5zM413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480L413.9 480z" />
+                    </svg>
+                  </a>
+                  <a class="icon-link mail" href="#contact" aria-label="Aller au formulaire de contact" title="Contact">
+                    <svg viewBox="0 0 512 512" role="img" aria-hidden="true">
+                      <title>Contact</title>
+                      <path
+                        d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="pad">
+              <h2 style="margin: 0 0 6px">Compétences</h2>
+              <div id="skills"></div>
+            </div>
+          </div>
+        </aside>
+
+        <section>
+          <div class="card">
+            <div class="pad">
+              <h2 style="margin: 0 0 12px">Expériences</h2>
+              <div id="timeline" class="timeline"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="pad">
+              <h2 style="margin: 0 0 12px">Formation</h2>
+              <div id="education" class="grid g-3"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="card">
+          <div class="pad">
+            <h3 class="mb-8">On construit quelque chose ?</h3>
+
+            <form id="contactForm" class="row row2">
+              <input
+                type="text"
+                id="company"
+                name="company"
+                autocomplete="off"
+                tabindex="-1"
+                style="position: absolute; left: -9999px; opacity: 0; pointer-events: none"
+                aria-hidden="true" />
+              <div class="row">
+                <label for="name">Nom</label>
+                <input id="name" name="name" required />
+              </div>
+              <div class="row">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required />
+              </div>
+              <div class="row full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <div class="form-actions">
+                <small>En envoyant, vous acceptez d'être contacté par email. Aucune newsletter, jamais.</small>
+                <button class="btn primary" type="submit" id="sendBtn">Envoyer</button>
+              </div>
+              <div id="formStatus" class="mt-8"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        ©
+        <span id="year"></span>
+        Raphaël Ferreira
+      </div>
+    </footer>
+  </body>
+</html>

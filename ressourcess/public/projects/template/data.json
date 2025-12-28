@@ -1,0 +1,17 @@
+{
+  "title": "PROJECT_TITLE",
+  "subtitle": "Courte description / accroche",
+  "date": "2025",
+  "status": "En développement",
+  "tags": ["All", "Demo"],
+  "cover": "../../assets/img/placeholder.png",
+  "repo": "",
+  "live": "live.html",
+  "doc": "doc.html",
+  "overview": "Résumé bref du projet.",
+  "details": "<p>Détails techniques, approche, instructions de build.</p>",
+  "more": "doc.html",
+  "kpi": [],
+  "features": [],
+  "stack": []
+}

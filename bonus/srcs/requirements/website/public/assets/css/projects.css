@@ -1,0 +1,150 @@
+/* Styles partagés pour les pages projets (garder la DA actuelle) */
+
+/* Mise en page hero */
+.project-hero {
+  display: grid;
+  gap: 16px;
+  margin: 24px 0;
+}
+.project-cover {
+  width: 25%;
+  height: 220px;
+  border-radius: 16px;
+  background-color: var(--bg-soft);
+  border: 1px solid var(--border);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+/* Variante carrée optionnelle */
+.project-cover.square {
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
+@media (min-width: 900px) {
+  .project-hero {
+    grid-template-columns: 1.2fr 1fr;
+  }
+  .project-cover {
+    height: 260px;
+  }
+}
+.project-meta {
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+.project-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.section {
+  margin: 28px 0;
+}
+
+/* Galerie / En voir plus */
+.gallery {
+  display: grid;
+  gap: 12px;
+}
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+@media (min-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .gallery img {
+    height: 180px;
+  }
+}
+
+/* KPI */
+.kpi {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 6px 0;
+}
+.kpi span {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  opacity: 0.9;
+}
+
+/* Utilitaires */
+.hidden {
+  display: none !important;
+}
+
+/* ---- Documentation: TOC + Code blocks ---- */
+.doc-toc {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  padding: 12px;
+  margin: 16px 0 24px;
+}
+.doc-toc h2 {
+  font-size: 1rem;
+  margin: 0 0 8px;
+}
+.doc-toc .toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.doc-toc .toc-list > li {
+  margin: 6px 0;
+}
+.doc-toc .toc-list a {
+  color: var(--link);
+}
+.doc-toc .toc-list a:hover {
+  color: var(--link-hover);
+}
+.doc-toc .toc-list.nested {
+  margin-left: 16px;
+}
+
+.code-block {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--bg-soft), var(--card) 20%);
+  margin: 12px 0;
+}
+.code-block pre {
+  margin: 0;
+  padding: 12px 14px;
+  overflow: auto;
+}
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+}
+.copy-btn:hover {
+  filter: brightness(1.05);
+}
+.copy-btn.copied {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}

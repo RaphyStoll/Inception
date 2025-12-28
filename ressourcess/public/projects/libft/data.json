@@ -1,0 +1,27 @@
+{
+  "title": "Libft",
+  "subtitle": "1er project de 42 recoder des helper de la libc",
+  "date": "2025",
+  "status": "Terminer",
+  "tags": ["C", "42"],
+  "cover": "../../assets/img/libft_cover.png",
+  "repo": "https://github.com/RaphyStoll/Libft",
+  "live": "live.html",
+  "doc": "doc.html",
+  "overview": "Libft est mon premier projet à 42 : recoder une sélection essentielle de la libc en C pour ancrer les fondamentaux bas niveau. Objectifs : maîtriser les pointeurs et la gestion de la mémoire, écrire des fonctions sûres (cas limites, tailles, régions qui se chevauchent), définir une API cohérente (préfixe ft_) et poser une base réutilisable pour les projets suivants. <br><strong>Résultat : </strong><br>une bibliothèque compacte, testée (Valgrind, jeux de tests) et conforme à la Norme 42.",
+  "details": "<p><strong>Approche technique</strong> : chaque fonction est écrite avec une attention particulière aux <em>cas limites</em> et au <em>comportement défini</em>.</p>",
+  "more": "doc.html",
+  "kpi": [
+    { "label": "Lignes de code", "value": "~1.5k" },
+    { "label": "Durée", "value": "4 jours" }
+  ],
+  "features": [
+	"<strong>Validation de charactere:</strong><br> isalpha, isdigit, isalnum, isascii, isprint",
+    "<strong>Gestion de string:</strong><br> strlen, strlcpy, strlcat, strchr, strrchr, strncmp, strnstr, strjoin, strsplit, strtrim, strmapi, striteri",
+    "<strong>Gestion de memoire:</strong><br> memset, bzero, memcpy, memmove, memchr, memcmp, calloc",
+    "<strong>Conversion de donnee:</strong><br> atoi, itoa, tolower, toupper",
+    "<strong>Écriture sur fd:</strong><br> putstr_fd, putendl_fd, putnbr_fd",
+	"<strong>Manipulation de liste chainée:</strong><br> lstnew, lstadd_front, lstadd_back, lstsize, lstlast, lstdelone, lstclear, lstiter, lstmap"
+  ],
+  "stack": ["C", "Makefile", "Valgrind"]
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Documentation — Template</title>
+    <meta name="description" content="Documentation détaillée du projet (template)." />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/projects.css" />
+    <script src="../../assets/js/theme.js" defer></script>
+    <script src="../../assets/js/doc.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="nav-left">
+          <a href="/index.html#home" class="brand">Raphaël Ferreira</a>
+        </div>
+        <nav class="links nav-center" aria-label="Navigation principale">
+          <a href="/index.html#about">À propos</a>
+          <a href="/index.html#projects">Projets</a>
+          <a id="cvLink" href="/cv.html" aria-label="Ouvrir mon CV">CV</a>
+        </nav>
+        <div class="nav-right" aria-label="Liens sociaux et actions">
+          <button id="themeBtn" class="btn ghost" aria-label="Basculer le thème"></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container pad">
+      <article class="card">
+        <div class="pad">
+          <h1 style="margin: 0 0 8px">Documentation du projet</h1>
+          <p class="muted" style="margin: 0 0 16px">Version longue, comme un billet de blog ou une fiche détaillée.</p>
+
+          <nav id="toc" class="doc-toc" aria-label="Sommaire">
+            <h2 style="margin: 0 0 6px; font-size: 1rem">Sommaire</h2>
+            <!-- La table des matières sera injectée ici -->
+          </nav>
+
+          <div id="doc" class="doc-content">
+            <h2>Contexte</h2>
+            <p>
+              Décris le problème, les objectifs, les contraintes et le périmètre. Utilise des titres, listes et
+              illustrations si nécessaire.
+            </p>
+
+            <h2>Architecture / Conception</h2>
+            <h3>Décisions techniques</h3>
+            <ul>
+              <li>Décisions techniques importantes</li>
+              <li>Schémas, modules, flux de données</li>
+              <li>Pourquoi ces choix</li>
+            </ul>
+
+            <h2>Mise en œuvre</h2>
+            <p>
+              Détaille les étapes clés, les obstacles rencontrés et comment tu les as résolus. Ajoute des extraits de
+              code si pertinent.
+            </p>
+
+            <pre><code>// Exemple de code (copiable)
+int main(void) {
+    printf("Hello World\\n");
+    return 0;
+}
+</code></pre>
+
+            <h2>Résultats</h2>
+            <ul>
+              <li>Fonctionnalités livrées</li>
+              <li>Métriques ou KPIs</li>
+              <li>Axes d'amélioration</li>
+            </ul>
+
+            <h2>Ressources</h2>
+            <ul>
+              <li><a href="./index.html">← Retour au projet</a></li>
+              <li><a href="./live.html">Démo</a></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="container">
+        ©
+        <span id="year"></span>
+        Raphaël Ferreira
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const y = document.getElementById('year')
+        if (y) y.textContent = new Date().getFullYear()
+      })
+    </script>
+  </body>
+</html>

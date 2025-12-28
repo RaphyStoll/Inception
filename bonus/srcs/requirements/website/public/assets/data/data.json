@@ -1,0 +1,29 @@
+{
+  "name": "Raphaël Ferreira",
+  "email": "contact@azilios.ch",
+  "highlights": [
+    "C / C++ • Bash • Python",
+    "Curiosité permanente",
+    "Code clair • Design minimal"
+  ],
+  "tags": [
+    "Favori",
+    "All",
+    "42",
+    "Game",
+    "C",
+    "Open Source",
+    "Sys/Admin"
+  ],
+  "projects": [
+    {
+      "slug": "Libft",
+      "title": "Libft",
+      "desc": "Recode la standard libc",
+      "tags": ["Favori", "All", "42", "C"],
+      "img": ".../../assets/img/libft_cover.png",
+      "link": "projects/libft/libft.html"
+    }
+  ],
+  "contactEndpoint": "/contact.php"
+}

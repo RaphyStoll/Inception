@@ -1,0 +1,83 @@
+services:
+  nginx:
+    build: requirements/nginx
+    ports:
+      - "443:443"
+    env_file: .env
+    volumes:
+      - wp-data:/var/www/html
+    depends_on:
+      - wordpress
+    networks:
+      - inception
+    restart: always
+
+  mariadb:
+    build: requirements/mariadb
+    env_file: .env
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - inception
+    restart: always
+
+  wordpress:
+    build: requirements/wordpress
+    env_file: .env
+    volumes:
+      - wp-data:/var/www/html
+    depends_on:
+      - mariadb
+    networks:
+      - inception
+    restart: always
+
+  redis:
+    build: requirements/redis
+    networks:
+      - inception
+    restart: always
+
+  ftp:
+    build: requirements/ftp
+    env_file: .env
+    volumes:
+      - wp-data:/var/www/html
+    ports:
+      - "21:21"
+      - "21100-21110:21100-21110"
+    networks:
+      - inception
+    restart: always
+
+  adminer:
+    build: requirements/adminer
+    networks:
+      - inception
+    restart: always
+
+  filebrowser:
+    build: requirements/filebrowser
+    env_file: .env
+    volumes:
+      - wp-data:/var/www/html
+    networks:
+      - inception
+    restart: always
+
+  website:
+    build: requirements/website
+    volumes:
+      - website-data:/var/www/html
+    networks:
+      - inception
+    restart: always
+
+volumes:
+  db-data:
+  wp-data:
+  website-data:
+
+networks:
+  inception:
+
