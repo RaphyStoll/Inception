@@ -73,6 +73,12 @@ services:
       - inception
     restart: always
 
+  dashboard:
+    build: requirements/dashboard
+    networks:
+      - inception
+    restart: always
+
 volumes:
   db-data:
   wp-data:
