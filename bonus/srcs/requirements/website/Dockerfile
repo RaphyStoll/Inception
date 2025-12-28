@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install -y \
 # Copier le site dans le dossier web
 COPY public/ /var/www/html/
 
-# Config NGINX minimale pour servir le site sur le port 80
 RUN echo "server { \
     listen 80; \
     server_name _; \

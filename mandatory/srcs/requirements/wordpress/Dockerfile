@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 COPY conf/www.conf /etc/php/www.conf.temp
-# Déplacer le fichier de conf au bon endroit (indépendant de la version de PHP)
+#bug lier a la version de php (fix a la barbare)
 RUN mv /etc/php/www.conf.temp /etc/php/*/fpm/pool.d/www.conf
 
 COPY tools/auto_config.sh /usr/local/bin/auto_config.sh

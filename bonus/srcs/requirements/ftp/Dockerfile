@@ -10,7 +10,6 @@ COPY tools/init_ftp.sh /usr/local/bin/init_ftp.sh
 
 RUN chmod +x /usr/local/bin/init_ftp.sh
 
-# Ports: 21 (Command) + 21100-21110 (Passive data)
 EXPOSE 21 21100-21110
 
 ENTRYPOINT ["/usr/local/bin/init_ftp.sh"]
